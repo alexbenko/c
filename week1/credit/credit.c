@@ -5,6 +5,7 @@ int get_length(long num);//declare function that counts the amount of digits of 
 bool valid_luhns(long num, int number_of_digits); //t/f if it passes the luhns algo
 int get_first_two(long num, int length); //gets first two digits of the card
 
+//detects if a card number is valid using the luhns algorithm and if it is visa,american express (AMEX) or mastercard
 int main(void)
 {
     long card;
