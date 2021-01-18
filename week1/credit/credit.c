@@ -26,18 +26,21 @@ int main(void)
 
     bool is_valid = valid_luhns(card,length);
     //printf("%d\n",is_valid);
-    if(!is_valid){
+    if(!is_valid)
+    {
         printf("INVALID\n");
         return 0;
     }
 
     int first_two = get_first_two(card,length);
-    if (first_two == 34 || first_two == 37){
+    if (first_two == 34 || first_two == 37)
+    {
         printf("AMEX\n");
         return 0;
     }
 
-    for(int i = 51; i <= 55; i++){ //MasterCard numbers start with 51, 52, 53, 54, or 55
+    for(int i = 51; i <= 55; i++)
+    { //MasterCard numbers start with 51, 52, 53, 54, or 55
         if(first_two == i){
             printf("MASTERCARD\n");
             return 0;
@@ -58,7 +61,6 @@ bool valid_luhns(long number, int number_of_digits)
 {
     int total = 0;
     int digits[number_of_digits];
-    int used[number_of_digits];
 
     for (int i = number_of_digits; i != 0; i--) //turns the card number into an array where each element is a single card number
     {
@@ -119,7 +121,8 @@ int get_length(long num)
     return count;
 }
 
-int get_first_two(long num,int length){
+int get_first_two(long num,int length)
+{
     int count = 0;
     while (true)
     {
