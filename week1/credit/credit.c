@@ -94,14 +94,7 @@ bool valid_luhns(long number, int number_of_digits)
         total += digits[i]; //loop over card number array and since used digits are zero, no need to check
     }
 
-    if (total % 10 == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return total % 10 == 0;
 }
 
 int get_length(long num)
